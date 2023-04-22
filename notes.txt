@@ -3,8 +3,20 @@ apropos signal -- about all signals
 ----------------------------------
 UNIX сигнал, который позволяет двум
 процессам общаться между собой.
+A signal is a standardized notification
+message used in Unix and POSIX-compliant
+operating systems. It is asynchronously
+sent to a running program to notify it
+of some event. The system interrupts the
+process’ normal execution to trigger a
+specific reaction like, among other
+things, terminating it. So signals are
+a sort of inter-process communication.
 
 kill -l посмотреть все сигналы
+
+getpid() returns the process ID (PID)
+of the calling process.
 
 SIGUSR1/SIGUSR2
 нам надо переопределить эти сигналы,
@@ -26,3 +38,14 @@ s_name.sa_flags = SA_SIGINFO;
 s_name.sa_sigaction = ft_name;
 (перенаправляет сигнал в эту ф-ю)
 sigaction(sig_name, &s_name, NULL);
+
+The pause() system call is used to
+make the calling process or calling
+thread sleep until one of the
+following events happened.
+The calling process receives
+the signal whose default behaviour
+is to kill the process. (OR)
+The signal handler execution is finished.
+In both the cases the pause()
+system call returns -1.
