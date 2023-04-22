@@ -6,7 +6,7 @@
 /*   By: ekulichk <ekulichk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 16:48:00 by ekulichk          #+#    #+#             */
-/*   Updated: 2023/04/21 22:47:40 by ekulichk         ###   ########.fr       */
+/*   Updated: 2023/04/22 11:57:33 by ekulichk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 #include <stdlib.h>
 #include "libft/libft.h"
 
-static void	sig_handler()
+static void	sig_handler(int signal, siginfo_t *sig, void *context)
+{
+	;
+}
 
 int	main(void)
 {
