@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekulichk <ekulichk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/21 11:36:25 by ekulichk          #+#    #+#             */
-/*   Updated: 2023/04/23 15:51:24 by ekulichk         ###   ########.fr       */
+/*   Created: 2023/04/23 14:56:05 by ekulichk          #+#    #+#             */
+/*   Updated: 2023/04/23 14:56:16 by ekulichk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	mt_send_sig(int pid, char *str)
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
-			usleep(500);
+			usleep(50);
 			i++;
 		}
 	}
@@ -46,7 +46,7 @@ static void	mt_send_sig(int pid, char *str)
 	while (i++ <= 7)
 	{
 		kill(pid, SIGUSR2);
-		usleep(500);
+		usleep(50);
 	}
 }
 

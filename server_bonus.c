@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekulichk <ekulichk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/21 16:48:00 by ekulichk          #+#    #+#             */
-/*   Updated: 2023/04/23 15:55:37 by ekulichk         ###   ########.fr       */
+/*   Created: 2023/04/23 14:55:27 by ekulichk          #+#    #+#             */
+/*   Updated: 2023/04/23 15:42:09 by ekulichk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ static void	mt_sig_handler(int sig, siginfo_t *info, void *ucontext)
 		cl_pid = info->si_pid;
 	if (current_bit == 8)
 	{
+		// ft_printf("here\n");
+		write(1, "hi", 3);
 		current_bit = 0;
 		if (result == '\0')
 		{
